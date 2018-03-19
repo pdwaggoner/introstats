@@ -18,24 +18,30 @@ se <- sigma/sqrt(4) # store the standard error as an object - sigma/sqrt(n)
 upper = mu + 1.96*se # xbar +- z*se
 lower = mu - 1.96*se
 
-zstat <- function(m, mu, sigma) {
+# Write a function, zs, to caluclate the z score
+zs <- function(m, mu, sigma) {
   (mean(m)-mu)/(sigma/sqrt(4)) 
   }
 
+# Use your function to calculate the z score for each sampled value above
 z <- numeric(length(d))
 for(i in 1:length(d)) {
-  z[i] <- zstat(m[i], mu, sigma)
+  z[i] <- zs(m[i], mu, sigma)
   }
 
+# Calculate the upper CI for each observation
 for(i in 1:length(d)) {
   upper[i] <- m[i] + 1.96*se
   }
+
+# Calculate the lower CI for each observation
 for(i in 1:length(d)) {
   lower[i] <- m[i] - 1.96*se
   }
 
-plot(d,upper,pch=25,ylim=c(0,25))
-points(d,lower,pch=24)
+# Now, plot each to see the distribution of values with CIs, based on the Z scores we just created from our sample data
+plot(d,upper,pch=19,ylim=c(0,25))
+points(d,lower,pch=19)
 with(sapply(d,function(i) lines(c(i,i),c(lower[i],upper[i]))))
 abline(a=mu, b=0, col="red") # repeat the steps above to see a different distribution; one obs should be outside of the mean, given the 95% CIs we created and applied (19/20)
 
