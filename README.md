@@ -1,2 +1,2 @@
 # introstats
-An R Package (in process) to complement teaching introductory statistics courses; basic statistical functions and computation
+This repository includes complementary files for teaching introductory statistics courses. The idea is to offer a series of tests, code, and examples of basic statistical concepts, functions, and computation. The repository will be actively maintained with new files being added periodically. As always, feel free to reach out for more code, examples, or to chat more about a concept or to report bugs. Thanks!
