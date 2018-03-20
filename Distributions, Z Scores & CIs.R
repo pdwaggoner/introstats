@@ -7,8 +7,8 @@ vector <- c(3,13, 15,20,13,8,17,11,9,6,9,6,11,10,14,11,7,10,10,16,16,12,11,14,16
 # Now, simulate some data, based on our "real" observations in vector
 set.seed(2673)
 
-d <- seq(1, 20, length = 20) # create an empty vector from 1-20
-m <- numeric(length(d)) # create an empty vector, where means will be stored
+d <- seq(1, 20, length = 20) # create an vector, d, from 1-20
+m <- numeric(length(d)) # create an empty vector, m, where means will be stored
 
 for(i in 1:length(d)) { # loop over all onservations and store for the ith observation of m
   m[i] <- mean(sample(vector, size=4, replace=T)) 
