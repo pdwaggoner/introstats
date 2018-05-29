@@ -1,4 +1,4 @@
-set.seed(1000000) # or anything else you want to make it
+set.seed(1000000) # or anything else you want to make it; do this for any simulations, etc.
 
 # Simulating Coin Toss
 k <- c(0, 1)
@@ -47,10 +47,9 @@ prod(31:1)/prod(28:1) # 26970
 # Permutations (n!/(n-r)!)
 prod(31:1)/(prod(28:1)*prod(3:1)) # 4495; only use one combination once, rather than reorder and call it a permutation
 
-# Problem: How many different five-card poker hands are possible from a standard 52-card deck? Then, calculate the probability of being dealt a royal flush. 
+# Sample problem: How many different five-card poker hands are possible from a standard 52-card deck? Then, calculate the probability of being dealt a royal flush. 
 prod(52:1)/(prod(47:1)*prod(5:1)) # 2,598,960 combinations - drop the "*prod(5:1)" to see the permutations, if order mattered - 
                                   # you will see there are many more if we altered each combination to cover all permutations
 
 4/2598960 # = 1.539077e-06, or 0.000001539077, or .0002 % chance of being dealt a royal flush
-
 1/649740 # because there is a 1 in 649,740 chance of being dealt a single royal flush
