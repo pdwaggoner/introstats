@@ -1,4 +1,4 @@
-## This code was updated and largely adapted from part of nicer's MCMC code
+## This code was largely adapted from part of nicer's MCMC code
 # Set our parameters
 m <- 0 # mean
 s <- 1 # standard deviation
