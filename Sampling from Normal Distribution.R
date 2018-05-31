@@ -32,4 +32,6 @@ for (i in seq_len(50))
   lines(cummean(rnorm(10000, m, s)),
         col=rgb(runif(1), runif(1), runif(1), .5))
 
-# Change the parameter values and repeat the steps above to see how the samples change accordingly (e.g., changing m to 2 will shift all samples to converge to 2 as this is the "true mean", increasing sd values will shift the sample mean given wider variance, and so on.)
+# Change the parameter values and repeat the steps above to see how the samples change accordingly 
+# (e.g., changing m to 2 will shift all samples to converge to 2 as this is the "true mean", 
+# increasing sd values will shift the sample mean given wider variance, and so on.)
