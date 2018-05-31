@@ -3,7 +3,7 @@
 m <- 0 # mean
 s <- 1 # standard deviation
 
-# Now sample from this distribution (mean = 0; sd = 2)
+# Now sample from this distribution (mean = 0; sd = 1)
 set.seed(235)
 samples <- rnorm(10000, m, s) # the `rnorm` function simply generates a random sample from a normal distribution
 
