@@ -1,4 +1,4 @@
-set.seed(1000000) # or anything else you want to make it; do this for any simulations, etc.
+set.seed(8235) # or anything else you want to make it; do this for any simulations, etc.
 
 # Simulating Coin Toss
 k <- c(0, 1)
