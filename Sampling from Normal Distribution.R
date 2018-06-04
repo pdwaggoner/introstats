@@ -4,8 +4,8 @@ m <- 0 # mean
 s <- 1 # standard deviation
 
 # Now sample from this distribution (mean = 0; sd = 1)
-set.seed(37738) # can be anything you want; tells where to begin/return
-samples <- rnorm(10000, m, s) # the `rnorm` function simply generates a random sample from a normal distribution
+set.seed(8329) # can be anything you want; tells where to begin/return
+samples <- rnorm(15000, m, s) # the `rnorm` function simply generates a random sample from a normal distribution
 
 # Let's check the mean from our sample
 mean(samples) # it is very close to the true mean we previously set (0)
