@@ -5,13 +5,13 @@ s <- 1 # standard deviation
 
 # Now sample from this distribution (mean = 0; sd = 1)
 set.seed(8329) # can be anything you want; tells where to start and return
-samples <- rnorm(15000, m, s) # the `rnorm` function simply generates a random sample from a normal distribution
+samples <- rnorm(2000, m, s) # the `rnorm` function simply generates a random sample from a normal distribution
 
 # Let's check the mean from our sample
 mean(samples) # it is very close to the true mean we previously set (0)
 
 # Let's now check the summary statistics for our sample
-summary(replicate(1000, mean(rnorm(10000, m, s))))
+summary(replicate(1000, mean(rnorm(2000, m, s))))
 
 # Now we can compute the cumulative mean (for element k, the sum of elements 1, 2,..., k, divided by k) by writing a simple function
 cummean <- function(x)
@@ -29,7 +29,7 @@ plot(cummean(samples), type="l", xlab="Sample", ylab="Cumulative mean",
      ylim = c(-2,2), # set wider limit for y axis to center the samples in the plot
      panel.first=abline(h=0, col="red"), las=1, log="x") # set the hline at 0 for comparison
 for (i in seq_len(50))
-  lines(cummean(rnorm(10000, m, s)),
+  lines(cummean(rnorm(2000, m, s)),
         col=rgb(runif(1), runif(1), runif(1), .5))
 
 # Change the parameter values and repeat the steps above to see how the samples change accordingly 
